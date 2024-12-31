@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40DE955C-9BFE-4723-8DC6-DDBB60F85D62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>SistemaInventarioKD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Sin-título-1 %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FmrCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrCategoria.Designer.cs">
+      <DependentUpon>FmrCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrCategoriaND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrCategoriaND.Designer.cs">
+      <DependentUpon>FmrCategoriaND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrInventario.Designer.cs">
+      <DependentUpon>FmrInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrMain.Designer.cs">
+      <DependentUpon>FmrMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrModelo.Designer.cs">
+      <DependentUpon>FmrModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrSalon.Designer.cs">
+      <DependentUpon>FmrSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmrCategoria.resx">
+      <DependentUpon>FmrCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrCategoriaND.resx">
+      <DependentUpon>FmrCategoriaND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrInventario.resx">
+      <DependentUpon>FmrInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrMain.resx">
+      <DependentUpon>FmrMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrModelo.resx">
+      <DependentUpon>FmrModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrSalon.resx">
+      <DependentUpon>FmrSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{DEE7473E-F257-4DB0-BD46-BBA503A146A2}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Negocio.csproj">
+      <Project>{68903c34-0513-40ee-b69d-ba836e5b5263}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alt-de-inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizarra %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agujero-de-hombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo fondo blancos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sin-título-1 %281%29.ico" />
+    <Content Include="Sin-título-1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
